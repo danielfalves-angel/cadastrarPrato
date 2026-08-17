@@ -5,3 +5,10 @@ CREATE TABLE USUARIO (
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL
 );
+
+CREATE TABLE PRATO (
+    id_prato INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES USUARIO(id_usuario)
+);
