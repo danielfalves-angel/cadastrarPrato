@@ -22,22 +22,21 @@ $PRATO =mysqli_fetch_assoc($resultado);
 
 <body>
     <header>
-        <h1>CRUD - Livraria</h1>
+        <h1>Editar</h1>
     </header>
     <main>
-        <h2>Editando o livro <?php echo $livro["titulo"]?>!</h2>
+        <h2>Editando o prato <?php echo $PRATO["id_prato"]?>!</h2>
         <form action="atualizar.php" method="POST">
-            <input type="hidden" name="id" value="<?php echo $livro["id"]?>">
+            <input type="hidden" name="id" value="<?php echo $PRATO["id_prato"]?>">
 
-            <label for="titulo">Título:</label>
-            <input type="text" name="titulo" value="<?php echo $livro["titulo"]?>">
+            <label for="nome_prato">Nome do Prato:</label>
+            <input type="text" name="nome_prato" value="<?php echo $PRATO["nome_prato"]?>">
             <br>
-            <label for="autor">Autor:</label>
-            <input type="text" name="autor" value="<?php echo $livro["autor"]?>">
+
+            <label for="usuario">Usuário:</label>
+            <input type="number" name="usuario" value="<?php echo $PRATO["usuario"]?>">
             <br>
-            <label for="ano">Ano de Publicação:</label>
-            <input type="number" name="ano" value="<?php echo $livro["ano"]?>">
-            <br>
+
             <button type="submit">Atualizar</button>
         </form>
 
