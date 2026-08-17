@@ -6,9 +6,9 @@ CREATE TABLE USUARIO (
     nome VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE PRATO (
+CREATE TABLE PRATOS (
     id_prato INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL,
+    nome_prato VARCHAR(100) NOT NULL,
     usuario_id INT,
     FOREIGN KEY (usuario_id) REFERENCES USUARIO(id_usuario)
 );

@@ -2,11 +2,10 @@
 
 include "../infra/conexao.php";
 
-$titulo = $_POST["titulo"];
-$autor = $_POST["autor"];
-$ano = $_POST["ano"];
+$nome_prato = $_POST["nome_prato"];
+$usuario_id = $_POST["usuario_id"];
 
-$sql = "INSERT INTO livros (titulo,autor,ano) VALUES ('$titulo','$autor','$ano')";
+$sql = "INSERT INTO livros (nome_prato,usuario_id) VALUES ('$nome_prato','$usuario_id')";
 
 mysqli_query($conexao, $sql);
 

@@ -3,10 +3,10 @@
 include "../infra/conexao.php";
 
 $id = $_GET["id"];
-$sql = "SELECT * FROM livros WHERE id = $id";
+$sql = "SELECT * FROM PRATOS WHERE id_prato = $id";
 $resultado = mysqli_query($conexao, $sql );
 
-$livro =mysqli_fetch_assoc($resultado);
+$PRATO =mysqli_fetch_assoc($resultado);
 
 ?>
 
@@ -16,7 +16,7 @@ $livro =mysqli_fetch_assoc($resultado);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD - Livraria</title>
+    <title>Editar Prato</title>
     <link rel="stylesheet" href="style/styles.css">
 </head>
 

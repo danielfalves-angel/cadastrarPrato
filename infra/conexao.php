@@ -3,7 +3,7 @@
 $host = "localhost";
 $usuario = "root";
 $senha = "root";
-$banco = "livraria_icaro_m2";
+$banco = "PIZZARIA_PORRONTO";
 
 $conexao = new mysqli($host, $usuario, $senha, $banco);
 

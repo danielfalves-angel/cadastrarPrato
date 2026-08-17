@@ -3,11 +3,10 @@
 include "../infra/conexao.php";
 
 $id = $_POST["id"];
-$titulo = $_POST["titulo"];
-$autor = $_POST["autor"];
-$ano = $_POST["ano"];
+$nome_prato = $_POST["nome_prato"];
+$usuario_id = $_POST["usuario_id"];
 
-$sql = "UPDATE livros SET titulo='$titulo',autor='$autor',ano='$ano' WHERE id = '$id'";
+$sql = "UPDATE PRATOS SET nome_prato='$nome_prato',usuario_id='$usuario_id' WHERE id_prato = '$id'";
 
 mysqli_query($conexao, $sql);
 header("Location: ../index.php");
