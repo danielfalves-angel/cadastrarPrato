@@ -12,15 +12,17 @@ $PRATOS = mysqli_query($conexao, "SELECT * FROM PRATOS");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIZZARIA PORRONTO</title>
-    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
+<body class="Background">
+    
     <header>
         <h1>PIZZARIA PORRONTO</h1>
     </header>
+    <main >
     <div class="caixa">
-    <main>
+    
             <h2>Adicione um novo prato!</h2>
             <form action="public/cadastrar.php" method="POST">
                 <label for="nome_prato">Nome do prato:</label>
@@ -32,28 +34,28 @@ $PRATOS = mysqli_query($conexao, "SELECT * FROM PRATOS");
                 <button type="submit">Cadastrar</button>
             </form>
     </div>
-        <div>
+       
             <h2>Pratos Cadastrados</h2>
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome do Prato</th>
-                    <th>Usuario</th>
-                </tr>
-                <?php while ($PRATO = mysqli_fetch_assoc($PRATOS)) { ?>
+            <div class="caixa">
+                <table >
                     <tr>
-                        <td><?php echo $PRATO["id_prato"]?></td>
-                        <td><?php echo $PRATO["nome_prato"] ?></td>
-                        <td><?php echo $PRATO["usuario_id"] ?></td>
-                        <td>
-                            <a href="public/editar.php?id=<?php echo $PRATO["id_prato"] ?>">Editar</a>
-                            <a href="public/excluir.php?id=<?php echo $PRATO["id_prato"] ?>">Excluir</a>
-                        </td>
+                        <th>ID</th>
+                        <th>Nome do Prato</th>
+                        <th>Usuario</th>
                     </tr>
-                <?php } ?>
-            </table>
-        </div>
-
+                    <?php while ($PRATO = mysqli_fetch_assoc($PRATOS)) { ?>
+                        <tr>
+                            <td><?php echo $PRATO["id_prato"]?></td>
+                            <td><?php echo $PRATO["nome_prato"] ?></td>
+                            <td><?php echo $PRATO["usuario_id"] ?></td>
+                            <td>
+                                <a href="public/editar.php?id=<?php echo $PRATO["id_prato"] ?>">Editar</a>
+                                <a href="public/excluir.php?id=<?php echo $PRATO["id_prato"] ?>">Excluir</a>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                </table>
+            </div>
     </main>
     <footer>
 
