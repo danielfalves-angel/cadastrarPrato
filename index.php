@@ -3,6 +3,7 @@
 include "infra/conexao.php";
 $PRATOS = mysqli_query($conexao, "SELECT * FROM PRATOS");
 
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +23,15 @@ $PRATOS = mysqli_query($conexao, "SELECT * FROM PRATOS");
     </header>
     <main >
     <div class="caixa">
-    
+    <main> 
+        <h2>Adicione um novo usuario!</h2>
+            <form action="public/cadastrar.php" method="POST">
+                <label for="nome">Nome do usuario:</label>
+                <input type="text" name="nome">
+                <br>
+                <button type="submit">Cadastrar</button>
+            </form>
+
             <h2>Adicione um novo prato!</h2>
             <form action="public/cadastrar.php" method="POST">
                 <label for="nome_prato">Nome do prato:</label>
