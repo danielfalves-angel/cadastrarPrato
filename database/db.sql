@@ -3,12 +3,16 @@ USE PIZZARIA_PORRONTO;
 
 CREATE TABLE USUARIOS (
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE
 );
 
 CREATE TABLE PRATOS (
     id_prato INT PRIMARY KEY AUTO_INCREMENT,
     nome_prato VARCHAR(100) NOT NULL,
+    descricao TEXT,
+    preco DECIMAL(5, 2) NOT NULL,
+    categoria VARCHAR(50) NOT NULL,
     usuario_id INT,
     FOREIGN KEY (usuario_id) REFERENCES USUARIOS(id_usuario)
 );
