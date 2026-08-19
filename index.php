@@ -1,4 +1,4 @@
-<<?php
+<?php
 
 include "infra/conexao.php";
 $USUARIOS = mysqli_query($conexao, "SELECT * FROM USUARIOS");
