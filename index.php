@@ -1,7 +1,6 @@
 <?php
 
 include "infra/conexao.php";
-$USUARIOS = mysqli_query($conexao, "SELECT * FROM USUARIOS");
 $PRATOS = mysqli_query($conexao, "SELECT * FROM PRATOS");
 
 ?>
@@ -34,7 +33,7 @@ $PRATOS = mysqli_query($conexao, "SELECT * FROM PRATOS");
             </form>
     </div>
         <div>
-            <h2>Livros Cadastrados</h2>
+            <h2>Pratos Cadastrados</h2>
             <table>
                 <tr>
                     <th>ID</th>

@@ -10,3 +10,4 @@ $sql = "UPDATE PRATOS SET nome_prato='$nome_prato',usuario_id='$usuario_id' WHER
 
 mysqli_query($conexao, $sql);
 header("Location: ../index.php");
+?>
